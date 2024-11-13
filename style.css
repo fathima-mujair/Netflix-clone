@@ -84,7 +84,7 @@
 }
 
 .bg4{
-    height: 850px;
+    height: 1100px;
     width: 100%;
     /* background-image: radial-gradient(black,rgb(37, 4, 18)); */
     background-color:black;
@@ -140,6 +140,12 @@
     /* margin: 15px; */
 }
 
+.signin-btn:hover{
+    background-color: grey;
+    cursor: pointer;
+    transition: .2s;
+}
+
 .menu{
     position: absolute;
     position: fixed;
@@ -149,6 +155,7 @@
     width: 30%;
     background-color:black;
     opacity: .7;
+    /* color: gray; */
     display: flex;
     justify-content: space-around;
     border-radius: 20px;
@@ -162,9 +169,16 @@
 }
 
 .menu h1{
+    color: rgb(187, 185, 185);
     font-size: small;
     margin: 0;
     font-family: "Martel Sans", sans-serif;
+}
+
+.menu h1:hover{
+    cursor: pointer;
+    color: white;
+    transition: .2s;
 }
 
 .imgbanner{
@@ -300,39 +314,60 @@ font-weight: 500;
     font-weight: 600;
     font-size: 20px;
 }
+
+.button2 button:hover{
+    cursor: pointer;
+    background-color: brown;
+    transition: .4s;
+}
 .content3{
     left: 130px;
     top: 800px;
     height:90px;
-    width:100%;
+    width:80%;
     position: absolute;
+    background-color: rgb(81, 79, 79);
+    border-radius: 25px;
+    opacity: .6;
     /* position: relative; */
     
 }
-.box3{
-    background-color: rgb(81, 79, 79);
+.content3:hover{
+    cursor: pointer;
+    opacity: .8;
+    transition: .8s;
+    transform: scale(1.1);
    
+}
+
+.content3:hover button{
+border-color: white;
+border: 2px solid;
+transition: .8s;
+}
+.box3{
+    
     height:90px;
     width: 80%;
     position: absolute;
     opacity: .6;
     border-radius: 25px;
-    /* position: relative; */
+   
 }
+
+
 
 
 
 .columns{
     display:flex;
     flex-direction:row;
-    /* left: 130px; */
-    /* top: 200px; */
+   
     height:180px;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     position: absolute;
-    /* position: relative; */
-    
+   
 
 }
 
@@ -391,11 +426,17 @@ padding-top: 30px;
 
 .images img{
     margin-left: 10px;
-    width: 180px;
+    width: 190px;
     height: 250px;
     border-radius: 20px;
 }
-
+.images img:hover{
+    /* margin-top: -10px;
+    margin-bottom: -10px;
+    height: 255px; */
+    transform: scale(1.1);
+    transition: .8s;
+}
 .content5{
     position: absolute;
     top:1250px;
@@ -413,30 +454,46 @@ padding-top: 30px;
     position: absolute;
     top: 1600px;
     left: 130px;
-    /* width: 100%; */
+    
 }
 .column6{
     position: absolute;
-    /* top:1800px; */
-    /* left: 130px; */
-    /* height: 100px; */
-/* width: 100%; */
     display: flex;
     flex-direction: row;
 }
 .col1,.col2,.col3{
     width: 350px;
-    /* flex-basis: 30%; */
     height: 180px;
     margin-right: 20px;
     border-radius: 25px;
     padding: 25px;
-    border-color: rgb(51, 49, 49);
+    border-color: rgb(22, 21, 21);
     border: solid .5px;  
 }
 .col1{
     background-image: linear-gradient(to bottom right, rgb(49, 52, 101), rgb(23, 4, 74),black);
    
+}
+
+.col1:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: .5s;
+    background-image: linear-gradient(to bottom right, rgb(62, 65, 121), rgb(29, 9, 86),rgb(20, 20, 20));
+   
+}
+.col2:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: .5s;
+    background-image: linear-gradient(to bottom right, rgb(135, 36, 178), rgb(32, 9, 94),rgb(22, 21, 21));
+   
+}
+.col3:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: .5s;
+    background-image: linear-gradient(to bottom right, rgb(110, 14, 83), rgb(35, 11, 103),rgb(46, 43, 43));
 
 }
 .col2{
@@ -530,7 +587,11 @@ padding-top: 30px;
     flex-direction: row;
     justify-content: space-between;
 }
-
+.row1:hover{
+    background-color: rgb(83, 81, 81);
+    transition: .5s;
+    cursor: pointer;
+}
 .row1 svg{
     width:30px;
     height: 25px;
@@ -541,8 +602,14 @@ padding-top: 30px;
     font-weight: 600;
 }
 
+/* .lastbtn{
+    position: sticky;
+    top: 100px;
+} */
+
 .lastbtn button{
     position: absolute;
+    /* position: sticky; */
     top: 2800px;
     left: 650px;
     color: rgb(249, 247, 247);
@@ -558,6 +625,11 @@ padding-top: 30px;
     font-size: 18px;
 }
 
+.lastbtn button:hover{
+    cursor: pointer;
+    background-color: brown;
+    transition: .4s;
+}
 .content9{
     position: absolute;
     top:2900px;
@@ -579,14 +651,58 @@ padding-top: 30px;
 }
 
 .dropdown{
+    z-index: 10;
     height: 200px;
     width: 200px;
     position: absolute;
-    top:3200px;
-    left:300px;
-    background-color: red;
+    top:3100px;
+    left:130px;
+   
+    
 }
 
-.dropdown p{
-    color: yellow;
+.dropdown select{
+    background-color: black;
+    position: absolute;
+    color: white;
+    border: 2px solid;
+    border-color: rgb(148, 145, 145);
+    border-radius: 25px;
+    width: 108px;
+    height: 32px;
+    padding-left: 10px;
+
+}
+.dropdown select svg{
+    width:30px;
+    height: 25px;
+}
+
+.dropdown option{
+    background-color: black;
+    position: absolute;
+    color: white;
+    border: 1px solid;
+    opacity: .8;
+    border-color: rgb(53, 52, 52);
+    border-radius: 25px;
+    width: 100px;
+    height: 3px;
+    padding-left: 8px;
+}
+.country{
+    position: absolute;
+    top:3150px;
+    left:130px;
+    z-index: 10;
+}
+
+.country p{
+  
+    font-size: 14px;
+    font-family: poppins;
+    font-weight: 300;
+    opacity: .7;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
